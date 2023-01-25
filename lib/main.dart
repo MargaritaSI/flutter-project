@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp()); // void main() { runApp(const MyApp()); }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   // const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
@@ -19,15 +21,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primaryColor: Colors.deepOrangeAccent),
       home: Scaffold( // container
       appBar: AppBar( // top
-        title: Text('Madge app'),
+        title: Text('My app'),
         centerTitle: true,
       ), // top
       body: Center(
-        child: Text('Madge', style: TextStyle(
-          fontSize: 20,
-          color: Colors.red,
-          fontFamily: 'Times New Roman'
-        ),)
+        child: FlatButton(onPressed: () {}, child: Text('Put on')),
+        // Icon(Icons.settings, size: 45, color: Colors.deepOrangeAccent),
       ),
       floatingActionButton: FloatingActionButton( //out of the body
 
@@ -40,6 +39,9 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+}
+
+class FlatButton {
 }
 
 
