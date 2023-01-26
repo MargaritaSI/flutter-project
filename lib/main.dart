@@ -25,7 +25,13 @@ class MyApp extends StatelessWidget {
         centerTitle: true,
       ), // top
       body: Center(
-        child: FlatButton(onPressed: () {}, child: Text('Put on')),
+        child: Image(
+          image: NetworkImage(),
+        )
+        //TextButton.icon(onPressed: () {}, icon: Icon(Icons.abc_sharp), label: Text('Settings'))
+        //ElevatedButton.icon(onPressed: () {}, icon: Icon(Icons.abc_sharp), label: Text('Settings'),)
+        //ElevatedButton(onPressed: () {}, child: Text('Put here')),
+        // TextButton(onPressed: () {}, child: Text('Put on'),
         // Icon(Icons.settings, size: 45, color: Colors.deepOrangeAccent),
       ),
       floatingActionButton: FloatingActionButton( //out of the body
@@ -41,8 +47,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class FlatButton {
-}
 
 
 // class MyApp extends StatelessWidget {
