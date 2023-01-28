@@ -25,8 +25,12 @@ class MyApp extends StatelessWidget {
         centerTitle: true,
       ), // top
       body: Center(
-        child: Image(
-          image: NetworkImage(),
+        child: Container(
+          color: Colors.deepOrangeAccent,
+          child: Text('itConteiner'),
+        //Image(
+          //image: AssetImage('assets/DALL·E 2023-01-26 20.48.10 - smart cat programmer in hat and glasses, one line drawing impressionism (1).png'),
+          // image: NetworkImage('https://www.care.com/c/wp-content/uploads/sites/2/2021/04/CarecomEditorialStaff-202054272054362868None.jpg.optimal.jpg'),
         )
         //TextButton.icon(onPressed: () {}, icon: Icon(Icons.abc_sharp), label: Text('Settings'))
         //ElevatedButton.icon(onPressed: () {}, icon: Icon(Icons.abc_sharp), label: Text('Settings'),)
