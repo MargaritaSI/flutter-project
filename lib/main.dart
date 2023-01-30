@@ -1,66 +1,41 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp()); // void main() { runApp(const MyApp()); }
+void main() => runApp(MaterialApp(
+  home: UserPanel(),
+));
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class UserPanel extends StatelessWidget {
+  const UserPanel({Key? key}) : super(key: key);
 
-  // const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
-//
-//   // This widget is the root of your application.
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Flutter Demo',
-//       theme: ThemeData(  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.deepOrangeAccent),
-      home: Scaffold( // container
-      appBar: AppBar( // top
-        title: Text('My app'),
+    return Scaffold(
+      backgroundColor: Colors.redAccent,
+      appBar: AppBar(
+        title: Text('it Progr'),
         centerTitle: true,
-      ), // top
-      body: Row(
-            children: [
-              Column(
-                children: [
-                  Text('Hello'),
-                  TextButton(onPressed: () {}, child: Text('Hello'))
-                ],
-              ),
-              Column(
-                children: [
-                  Text('Hello'),
-                  TextButton(onPressed: () {}, child: Text('Hello'))
-                ],
-              )
-            ],
+        backgroundColor: Colors.black,
       ),
-        //Image(
-          //image: AssetImage('assets/DALL·E 2023-01-26 20.48.10 - smart cat programmer in hat and glasses, one line drawing impressionism (1).png'),
-          // image: NetworkImage('https://www.care.com/c/wp-content/uploads/sites/2/2021/04/CarecomEditorialStaff-202054272054362868None.jpg.optimal.jpg'),
-        //TextButton.icon(onPressed: () {}, icon: Icon(Icons.abc_sharp), label: Text('Settings'))
-        //ElevatedButton.icon(onPressed: () {}, icon: Icon(Icons.abc_sharp), label: Text('Settings'),)
-        //ElevatedButton(onPressed: () {}, child: Text('Put here')),
-        // TextButton(onPressed: () {}, child: Text('Put on'),
-        // Icon(Icons.settings, size: 45, color: Colors.deepOrangeAccent),
-
-      floatingActionButton: FloatingActionButton( //out of the body
-
-        child: Text('Push'),
-        backgroundColor: Colors.deepOrangeAccent,
-        onPressed: () {
-          print('Clicked');
-        },
-      ),
+      body: SafeArea(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Column(
+              children: [
+                Text('J D'),
+                CircleAvatar(
+                  backgroundImage: AssetImage('assets/DALL·E 2023-01-26 20.48.10 - smart cat programmer in hat and glasses, one line drawing impressionism (1).png'),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
 }
+
+
 
 
 
