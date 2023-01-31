@@ -4,8 +4,16 @@ void main() => runApp(MaterialApp(
   home: UserPanel(),
 ));
 
-class UserPanel extends StatelessWidget {
+class UserPanel extends StatefulWidget {
   const UserPanel({Key? key}) : super(key: key);
+
+  @override
+  State<UserPanel> createState() => _UserPanelState();
+}
+
+class _UserPanelState extends State<UserPanel> {
+
+  int _count = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +30,39 @@ class UserPanel extends StatelessWidget {
           children: [
             Column(
               children: [
-                Text('J D'),
+                Padding(padding: EdgeInsets.only(top: 30),),
+                Text('J D', style: TextStyle(
+                  fontSize: 25,
+                  color: Colors.white,
+                ),),
+                Padding(padding: EdgeInsets.only(top: 10),),
                 CircleAvatar(
                   backgroundImage: AssetImage('assets/DALL·E 2023-01-26 20.48.10 - smart cat programmer in hat and glasses, one line drawing impressionism (1).png'),
-                )
+                  radius: 50,
+                ),
+                Padding(padding: EdgeInsets.only(top: 10),),
+                Row(
+                  children: [
+                    Icon(Icons.mail_outline, size: 25),
+                    Padding(padding: EdgeInsets.only(left: 10),),
+                    Text('admit@it.com', style: TextStyle(color: Colors.white),)
+                  ],
+                ),
+                Padding(padding: EdgeInsets.only(top: 10),),
+                Text('Count: $_count', style: TextStyle(color: Colors.white),)
               ],
             )
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.ac_unit_rounded),
+        backgroundColor: Colors.amber,
+        onPressed: () {
+          setState(() {
+            _count++;
+          });
+        },
       ),
     );
   }
